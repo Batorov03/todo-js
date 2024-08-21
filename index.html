@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/style.css">
+	<title>todo-js</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<div>ToDo приложение</div>
+		<div>список задач на сегодня</div>
+
+		<!-- List of tasks -->
+		<div>
+			<ul id="tasksList" class="list-group">
+
+				<li id="emptyList" class="list-group__item">
+					<img src="./img/leaf.svg" alt="Empty" width="18" height="18">
+					<div class="empty-list__title">Список дел пуст</div>
+				</li>
+
+				<li class="task-item">
+					<span class="task-title">Купить молоко</span>
+					<div class="task-item__buttons">
+						<button type="button" data-action="done" class="btn-action">
+							<img src="./img/tick.svg" alt="Done" width="18" height="18">
+						</button>
+						<button type="button" data-action="delete" class="btn-action">
+							<img src="./img/cross.svg" alt="Done" width="18" height="18">
+						</button>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<!-- //List of tasks -->
+
+		<!-- Form -->
+		<div class="card">
+			<div class="card-header">Добавить новую задачу</div>
+			<div class="card-body">
+				<form id="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="taskInput" placeholder="Текст задачи" required>
+						<small id="emailHelp">Что делаем, сколько времени тратим, какой результат
+							получаем.</small>
+					</div>
+					<button type="submit" class="btn active">Добавить</button>
+				</form>
+			</div>
+		</div>
+		<!-- //Form  -->
+		<!-- <button id="removeDoneTasks" class="btn btn-secondary mt-4 float-right">Удалить выполненные задачи</button> -->
+
+	</div>
+	<script src="js/main.js"></script>
+</body>
+
+</html>
