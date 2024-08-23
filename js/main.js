@@ -73,7 +73,11 @@ function deleteTask(event) {
 	// Определяем ID задачи
 	const id = Number(parenNode.id);
 
-	// Удаляем задча через фильтрацию массива
+	//  Удаляем способ №1
+	// const index = tasks.findIndex((task) => task.id === id)
+	// tasks.splice(index, 1)
+
+	// Удаляем задча через фильтрацию массива способ №2
 	tasks = tasks.filter((task) => task.id !== id);
 
 	// Сохраняем список задач в хранилище браузера localStorage
